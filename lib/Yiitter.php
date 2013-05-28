@@ -51,7 +51,7 @@ namespace Yiitter;
  * If a client with the same configuration was previously created, {@link getClient} will return the previously
  * created client instance. If you do not want this behavior, you can use {@link createClient}.
  *
- * @author Shiki <shikishiji@gmail.com>
+ * @author Shiki <bj@basanes.net>
  */
 class Yiitter extends \CApplicationComponent
 {
