@@ -38,11 +38,12 @@ class ClientException extends \Exception
 
   /**
    * Creates an instance of self only if the \tmhOAuth instance's response is an error.
+   * This only allows non-tmhOAuth for unit testing.
    *
    * @param \tmhOAuth $client
    * @return self
    */
-  public static function createIfFailed(\tmhOAuth $client)
+  public static function createIfFailed($client)
   {
     if ($client->response['info']['http_code'] == 200
       || $client->response['info']['http_code'] == 201) {
