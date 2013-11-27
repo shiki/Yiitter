@@ -97,7 +97,7 @@ class Yiitter extends \CApplicationComponent
   {
     parent::init();
 
-    if (class_exists('tmhOAuth', false))
+    if (!$this->tmhOAuthLibPath || class_exists('tmhOAuth', false))
       return;
 
     require($this->tmhOAuthLibPath . '/tmhOAuth.php');
